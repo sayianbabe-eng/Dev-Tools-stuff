@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     padding: 15px 20px;
   }
-  .nav-links li a {
+  .nav-links {
     list-style: none;
     color: white;
     text-decoration: none;
