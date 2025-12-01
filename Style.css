@@ -3,18 +3,24 @@ body {
   margin: 50px;
   font-family:Arial, sans-serif;
   line height: 1.6;
-  }
+}
 
   header {background: #DC4D01;
     color: #fff;
-         }
+}
+  
   .navbar {
     dispaly: flex;
     justify-content: space-between;
     padding: 15px 20px;
-  }
+}
+  
   .nav-links {
     list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  .nav-links {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -24,6 +30,18 @@ body {
     border-bottom: 2px solid #fff;
 }
 
+.hero {
+    padding: 60px 20px;
+    text align: center;
+    background: #FFDFBF;
+}
+
+.button {
+  padding: 10px 20px;
+  background: #DC4D01;
+  color: #DC4D01;
+  boarder: white 9px;
+}
 
     
     
