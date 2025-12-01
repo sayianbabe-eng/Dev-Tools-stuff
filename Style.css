@@ -1,0 +1,28 @@
+/*General Style*/
+body {
+  margin: 50px;
+  font-family:Arial, sans-serif;
+  line height: 1.6;
+  }
+
+  header {background: #DC4D01;
+    color: #fff;
+         }
+  .navbar {
+    dispaly: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #fff;
+}
+
+
+    
+    
