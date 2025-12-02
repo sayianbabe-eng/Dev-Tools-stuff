@@ -6,106 +6,89 @@
 }
 
 body {
-  margin: 50px;
+  margin-top: 80px; /* Prevent navbar overlap */
   font-family: Arial, sans-serif;
   line-height: 1.6;
   text-align: center;
 }
 
-/* Header */
+/* HEADER */
 header {
   display: flex;
-  justify-content: space-between; /* logo left, nav right */
+  justify-content: flex-start; /* everything aligns left */
   align-items: center;
+  gap: 40px; /* little space between logo + menu */
   padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #DC4D01;
+  z-index: 1000;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
+  color: white;
+}
+
+/* NAVIGATION */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+/* SECTION: Problem & Solution */
+.problem-solution {
+  padding: 40px 30px;
+  background: #FFDFBF;
+}
+
+/* Headings */
+h2, h3 {
+  font-family: Helvetica, serif;
+  margin-bottom: 15px;
 }
 
 /* Paragraphs */
 p {
   margin-bottom: 15px;
-  font-size: 1rem;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   color: black;
 }
 
-/* NAVIGATION BAR */
-.navbar {
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  background: #DC4D01;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-/* Centering + spacing navbar links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px; /* Even spacing */
-}
-
-/* Styling each link */
-.nav-links a {
-  color: white;
-  font-size: 1.2rem;
-  padding: 10px 15px;
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s ease;
-}
-
-.nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-}
-
-/* Active link indicator */
-.nav-links a.active {
-  border-bottom: 2px solid #fff;
-}
-
-/* SECTION: Problem & Solution */
-.problem-solution {
-  padding: 120px 30px;  
-  background: #FFDFBF;
-  text-align: center;
-}
-
-/* Headings */
-h2 {
-  font-family: Helvetica, serif;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-h3 {
-  font-family: Helvetica, serif;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
 /* BUTTON */
 .Button {
   display: inline-block;
-  padding: 10px 25px; /* Smaller width */
+  padding: 10px 25px;
   background-color: white;
   color: #DC4D01;
   border: 3px solid #DC4D01;
   border-radius: 20px;
   font-weight: bold;
   font-size: 1.1rem;
-  cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 .Button:hover {
