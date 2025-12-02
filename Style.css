@@ -12,27 +12,31 @@ body {
   text-align: center;
 }
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: flex-start; /* everything aligns left */
-  align-items: center;
-  gap: 40px; /* little space between logo + menu */
-  padding: 10px 20px;
+Header {
   position: fixed;
   top: 0;
   width: 100%;
   background: #DC4D01;
   z-index: 1000;
+
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: space-between; /* Logo left, navbar right */
+  align-items: center;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: white;
 }
 
-/* NAVIGATION */
+/* Navigation aligned right */
+.navbar {
+  margin-left: auto; /* Push nav to far right */
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -44,7 +48,7 @@ header {
   font-size: 1.1rem;
   padding: 8px 12px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -53,8 +57,9 @@ header {
 }
 
 .nav-links a.active {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #fff;
 }
+
 
 /* SECTION: Problem & Solution */
 .problem-solution {
