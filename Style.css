@@ -14,9 +14,15 @@ body {
 
 /* Header */
 header {
-  background: #DC4D01;
-  color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* Paragraphs */
