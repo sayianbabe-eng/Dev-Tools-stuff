@@ -51,15 +51,15 @@ p {
     background: #FFDFBF;
 }
 
-h1 {
+h2 {
  font-family: helectiva, serif;
- font-size: 20px
+ font-size: 2rem
   text-align: center;
 }
 
-h2 {
+h3 {
  font-family: helectiva, serif;
- font-size: 20px
+ font-size: 2rem
   text-align: center;
 }
     
