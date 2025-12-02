@@ -116,3 +116,27 @@ p {
 .feature h3 {
   color: #DC4D01;
 }
+
+p, li {
+  font-size: 1rem;
+  color: #000;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  margin-top: 10px;
+  text-align: left;
+  display: inline-block;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #DC4D01;
+  color: white;
+}
