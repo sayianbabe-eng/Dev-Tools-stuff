@@ -96,3 +96,18 @@ p {
   color: white;
   transform: scale(1.1);
 }
+
+
+.feature {
+  background: #FFDFBF;
+  padding: 20px;
+  margin: 25px auto;
+  border-radius: 15px;
+  border-left: 6px solid #DC4D01;
+  max-width: 900px;
+  text-align: left;
+}
+
+.feature h3 {
+  color: #DC4D01;
+}
