@@ -24,21 +24,28 @@ p {
     font-size: 1.5rem;
 }
   .navbar {
-    dispaly: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 15px 20px;
+  padding: 10px 0;
+    position: fixed; /* Make the nav bar stick to the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure nav is above other content */
 }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+ 
+.nav-links {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange list items horizontally */
+    justify-content: center; /* Center the links */
 }
-  .nav-links {
+.nav-links {
+    display: block; /* Make the entire area clickable */
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 .nav-links a.active {
