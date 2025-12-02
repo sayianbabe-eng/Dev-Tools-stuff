@@ -30,13 +30,16 @@ body {
     border-bottom: 2px solid #fff;
 }
 
-.hero {
+.problem-solution {
     padding: 60px 20px;
     text align: center;
     background: #FFDFBF;
 }
 
 h2 {
+ font-family: helectiva, serif;
+ font-size: 9px
+}
     
 
 .Button {
