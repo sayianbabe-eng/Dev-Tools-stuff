@@ -135,7 +135,19 @@ ul {
   text-align: left;
   display: inline-block;
 }
+.image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
 
+.image-section img {
+  height: 50vh;          /* 1/2 of screen height */
+  width: auto;           /* keep vertical proportions */
+  border-radius: 12px;
+  display: block;
+}
 /* ------------------------------
    FOOTER
 ------------------------------ */
