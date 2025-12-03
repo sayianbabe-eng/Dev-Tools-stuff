@@ -63,39 +63,35 @@ header {
   border-bottom: 2px solid #fff;
 }
 
-/* Hamburger icon */
+/* HAMBURGER ICON */
 .menu-toggle {
   font-size: 30px;
   color: white;
   cursor: pointer;
-  display: none;
+
+  /* Push hamburger to extreme right */
+  margin-left: auto;
 }
 
-/* --------------------------------
-   MOBILE NAVIGATION
----------------------------------- */
+/* NAV LINKS FOR MOBILE */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
   .nav-links {
     position: absolute;
     top: 70px;
     right: 0;
-    background: #DC4D01;
     width: 100%;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    background: #DC4D01;
+    text-align: center;
     padding: 20px 0;
-    display: none;
+    display: none; /* hidden by default */
+    gap: 20px;
   }
 
   .nav-links.show {
     display: flex;
   }
-}
+
 
 /* --------------------------------
    HEADINGS & TEXT
