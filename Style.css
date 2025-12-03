@@ -25,7 +25,7 @@ header {
   z-index: 1000;
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -63,35 +63,45 @@ header {
   border-bottom: 2px solid #fff;
 }
 
-/* HAMBURGER ICON */
+/* HAMBURGER ICON - Hidden on desktop */
 .menu-toggle {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-
-  /* Push hamburger to extreme right */
-  margin-left: auto;
+  display: none;
 }
 
-/* NAV LINKS FOR MOBILE */
+/* -------------------------------
+   MOBILE RESPONSIVE DESIGN
+---------------------------------- */
 @media (max-width: 768px) {
+  /* Show hamburger on mobile at extreme right */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 60px; /* below header */
     right: 0;
     width: 100%;
     flex-direction: column;
     background: #DC4D01;
     text-align: center;
     padding: 20px 0;
-    display: none; /* hidden by default */
+    display: none;
     gap: 20px;
+    z-index: 1000;
   }
 
   .nav-links.show {
     display: flex;
   }
-
+}
 
 /* --------------------------------
    HEADINGS & TEXT
@@ -119,46 +129,46 @@ ul {
    PROBLEM & SOLUTION SECTION
 ------------------------------ */
 .problem-solution {
-  padding: 60px 20px; /* more space around the section */
-  background-color: #FFF5E5; /* light, soft background for contrast */
+  padding: 60px 20px;
+  background-color: #FFF5E5;
   max-width: 1000px;
-  margin: 50px auto; /* center section and give vertical spacing */
+  margin: 50px auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* subtle depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .problem-solution h2,
 .problem-solution h3 {
   font-family: Helvetica, serif;
-  color: #DC4D01; /* primary color for headings */
+  color: #DC4D01;
   margin-bottom: 20px;
 }
 
 .problem-solution h2 {
-  font-size: 2rem; /* larger main heading */
+  font-size: 2rem;
   text-align: center;
 }
 
 .problem-solution h3 {
-  font-size: 1.5rem; /* subheading */
-  margin-top: 40px; /* spacing above */
+  font-size: 1.5rem;
+  margin-top: 40px;
   text-align: left;
 }
 
 .problem-solution p {
   font-size: 1rem;
-  line-height: 1.8; /* more readable spacing */
+  line-height: 1.8;
   color: #333;
   margin-bottom: 20px;
 }
 
 .problem-solution p em {
   display: block;
-  background: #FFEDD5; /* subtle highlight for emphasized text */
+  background: #FFEDD5;
   padding: 15px;
-  border-left: 4px solid #DC4D01; /* visual cue for emphasis */
+  border-left: 4px solid #DC4D01;
   border-radius: 6px;
-  font-style: normal; /* optional: make emphasis less italic if preferred */
+  font-style: normal;
   margin-bottom: 20px;
 }
 
@@ -197,14 +207,12 @@ ul {
   max-width: 900px;
   text-align: left;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-  /* Smooth animation WITHOUT layout shift */
   transition: transform 0.4s ease, box-shadow 0.3s ease;
   transform-origin: center;
 }
 
 .feature:hover {
-  transform: scale(1.03); /* stays in place */
+  transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
@@ -231,26 +239,28 @@ ul {
 }
 
 .image-section img {
-  height: 75vh;          /* 3/4 of the screen height */
+  height: 75vh;
   width: auto;
   max-width: 90vw;
   border-radius: 12px;
   object-fit: cover;
   display: block;
 }
+
 /* FULL-WIDTH RESPONSIVE BANNER */
 .banner {
   width: 100%;
-  margin-top: 80px;   /* pushes it below fixed header */
+  margin-top: 80px;
 }
 
 .banner img {
   width: 100%;
   height: auto;
-  max-height: 60vh;   /* keeps image large but not too tall */
+  max-height: 60vh;
   object-fit: cover;
   display: block;
 }
+
 /* --------------------------------
    FORM STYLING
 ---------------------------------- */
@@ -322,8 +332,6 @@ button:hover {
     padding: 20px;
   }
 }
-
-
 
 /* --------------------------------
    FOOTER
