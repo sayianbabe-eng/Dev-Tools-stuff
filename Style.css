@@ -71,35 +71,32 @@ header {
 /* -------------------------------
    MOBILE RESPONSIVE DESIGN
 ---------------------------------- */
-@media (max-width: 768px) {
-  /* Show hamburger on mobile at extreme right */
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    z-index: 1100;
-  }
+/* ⚡ Hide nav links on mobile by default */
+.nav-links {
+  display: flex; /* desktop default */
+  gap: 30px;
+}
 
+@media (max-width: 768px) {
   .nav-links {
+    display: none;  /* ⚡ hidden initially */
+    flex-direction: column;
     position: absolute;
-    top: 60px; /* below header */
+    top: 60px;
     right: 0;
     width: 100%;
-    flex-direction: column;
     background: #DC4D01;
-    text-align: center;
     padding: 20px 0;
-    display: none;
     gap: 20px;
-    z-index: 1000;
+    text-align: center;
   }
 
   .nav-links.show {
-    display: flex;
+    display: flex;  /* ⚡ display flex when "show" class is added */
+  }
+
+  .menu-toggle {
+    display: block; /* ⚡ show hamburger on mobile */
   }
 }
 
