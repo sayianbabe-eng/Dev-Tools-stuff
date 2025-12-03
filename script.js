@@ -35,11 +35,11 @@ if (form) {
 // ===============================
 // MOBILE NAV TOGGLE
 // ===============================
-const toggle = document.getElementById("menuToggle"); // corrected ID
-const navLinks = document.getElementById("navLinks"); // UL element
 
-if (toggle && navLinks) {
-    toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-    });
-}
+// Hamburger Menu Toggle
+const toggleButton = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggleButton.addEventListener("click", () => {
+    navLinks.classList.toggle("show"); // toggles 'show' class to show/hide menu
+});
