@@ -59,6 +59,42 @@ header {
   border-bottom: 2px solid #fff;
 }
 
+/* HAMBURGER ICON (hidden on desktop) */
+.menu-toggle {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* -------------------------------
+   MOBILE RESPONSIVE DESIGN
+---------------------------------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #DC4D01;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none; /* hidden by default */
+  }
+
+  .nav-links.show {
+    display: flex; /* visible when toggled */
+  }
+
+
+
 /* SECTION: Problem & Solution */
 .problem-solution {
   padding: 40px 30px;
@@ -141,9 +177,16 @@ ul {
 }
 
 /* Image Section */
-.image-section img {
+.image-section {
   width: 100%;
-  max-width: 1200px;  /* large, but prevents oversizing on huge monitors */
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.image-section img {
+  width: 90%;
+  max-width: 1200px;
   height: auto;
   border-radius: 12px;
   display: block;
