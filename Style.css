@@ -119,13 +119,17 @@ ul {
   max-width: 900px;
   text-align: left;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-  transition: width 0.5s ease-out, box-shadow 0.3s linear; transition-delay: 0.1s; 
-} 
+  
+  /* Animation improvements */
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  transform-origin: center; /* prevents layout shifting */
+}
 
 .feature:hover { 
-  width: 250px; 
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2); 
+  transform: scale(1.03);  /* scales without altering layout flow */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25); 
 }
+
 .feature h3 {
   color: #DC4D01;
 }
@@ -137,16 +141,10 @@ ul {
 }
 
 /* Image Section */
-.image-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 40px 0;
-}
-
 .image-section img {
-  height: 50vh;          /* 1/2 of screen height */
-  width: auto;           /* keep vertical proportions */
+  width: 100%;
+  max-width: 1200px;  /* large, but prevents oversizing on huge monitors */
+  height: auto;
   border-radius: 12px;
   display: block;
 }
