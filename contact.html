@@ -9,16 +9,19 @@
 
 <body>
 <header>
-     <div class="logo">Storyworks</div>
+    <div class="logo">Storyworks</div>
+
+    <!-- Mobile Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
 
     <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
 
 <main class="content">
@@ -27,27 +30,27 @@
         <h2>Contact Us</h2>
 
         <form id="contactForm">
-            <label>Name:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" required>
 
-            <label>Email:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" required>
 
-            <label>Message:</label>
+            <label for="message">Message:</label>
             <textarea id="message" required></textarea>
 
             <button type="submit">Send Message</button>
             <p id="errorMsg" class="error"></p>
         </form>
+
+        <p><strong>Telephone:</strong> 647-889-9088</p>
+        <p><strong>Email:</strong> sbromfi7@my.centennialcollege.ca</p>
     </section>
 
-    <p>Tele: 647 889 9088</p>
-    <p>Email: sbromfi7@my.centennialcollege.ca</p>
-
-   </main>
+</main>
 
 <footer>
-    <p>&copy; 2025 Storyworks. All rights reserved.</p>
+    <p>&copy; 2025 Storyworks, Team G4. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
