@@ -36,10 +36,12 @@ if (form) {
 // MOBILE NAV TOGGLE
 // ===============================
 
-// Hamburger Menu Toggle
-const toggleButton = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+// ⚡ HAMBURGER MENU
+const toggleButton = document.getElementById("menu-toggle"); // selects the hamburger
+const navLinks = document.querySelector(".nav-links");        // selects the nav links
 
-toggleButton.addEventListener("click", () => {
-    navLinks.classList.toggle("show"); // toggles 'show' class to show/hide menu
-});
+if (toggleButton) {
+  toggleButton.addEventListener("click", () => {
+    navLinks.classList.toggle("show"); // ⚡ toggles the 'show' class
+  });
+}
