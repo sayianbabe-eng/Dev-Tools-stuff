@@ -119,6 +119,53 @@ ul {
   display: inline-block;
 }
 
+/* ------------------------------
+   PROBLEM & SOLUTION SECTION
+------------------------------ */
+.problem-solution {
+  padding: 60px 20px; /* more space around the section */
+  background-color: #FFF5E5; /* light, soft background for contrast */
+  max-width: 1000px;
+  margin: 50px auto; /* center section and give vertical spacing */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* subtle depth */
+}
+
+.problem-solution h2,
+.problem-solution h3 {
+  font-family: Helvetica, serif;
+  color: #DC4D01; /* primary color for headings */
+  margin-bottom: 20px;
+}
+
+.problem-solution h2 {
+  font-size: 2rem; /* larger main heading */
+  text-align: center;
+}
+
+.problem-solution h3 {
+  font-size: 1.5rem; /* subheading */
+  margin-top: 40px; /* spacing above */
+  text-align: left;
+}
+
+.problem-solution p {
+  font-size: 1rem;
+  line-height: 1.8; /* more readable spacing */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.problem-solution p em {
+  display: block;
+  background: #FFEDD5; /* subtle highlight for emphasized text */
+  padding: 15px;
+  border-left: 4px solid #DC4D01; /* visual cue for emphasis */
+  border-radius: 6px;
+  font-style: normal; /* optional: make emphasis less italic if preferred */
+  margin-bottom: 20px;
+}
+
 /* --------------------------------
    BUTTON
 ---------------------------------- */
