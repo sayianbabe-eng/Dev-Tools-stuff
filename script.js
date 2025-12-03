@@ -47,3 +47,25 @@ featureCards.forEach(card => {
         }
     });
 });
+// --- IMAGE POPUP ENLARGE FEATURE ---
+
+const img = document.querySelector(".image-section img");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close-modal");
+
+img.addEventListener("click", () => {
+    modal.style.display = "flex";  
+    modalImg.src = img.src;        // Load clicked image into modal
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Allow clicking anywhere outside the image to close
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
