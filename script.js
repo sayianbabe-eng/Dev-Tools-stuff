@@ -25,3 +25,10 @@ if (form) {
         errorMsg.textContent = "";
     });
 }
+
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("navbar").querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
