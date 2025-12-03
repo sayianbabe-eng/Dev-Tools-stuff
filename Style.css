@@ -1,6 +1,4 @@
-/* --------------------------------
-   GENERAL RESET
----------------------------------- */
+/* GENERAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +6,13 @@
 }
 
 body {
-  margin-top: 80px; /* Prevent navbar overlap */
+  margin-top: 80px;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   text-align: center;
 }
 
-/* --------------------------------
-   HEADER
----------------------------------- */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -25,7 +21,7 @@ header {
   z-index: 1000;
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -37,13 +33,15 @@ header {
 
 /* NAVIGATION */
 .navbar {
-  margin-left: auto;
+  width: 100%;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 30px;
+  margin-top: 10px;
 }
 
 .nav-links a {
@@ -63,46 +61,16 @@ header {
   border-bottom: 2px solid #fff;
 }
 
-/* HAMBURGER ICON - Hidden on desktop */
-.menu-toggle {
-  display: none;
-}
-
-/* -------------------------------
-   MOBILE RESPONSIVE DESIGN
----------------------------------- */
-/* ⚡ Hide nav links on mobile by default */
-.nav-links {
-  display: flex; /* desktop default */
-  gap: 30px;
-}
-
+/* MOBILE STYLING - vertical nav links */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;  /* ⚡ hidden initially */
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background: #DC4D01;
-    padding: 20px 0;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .nav-links.show {
-    display: flex;  /* ⚡ display flex when "show" class is added */
-  }
-
-  .menu-toggle {
-    display: block; /* ⚡ show hamburger on mobile */
+    align-items: center;
+    gap: 15px;
   }
 }
 
-/* --------------------------------
-   HEADINGS & TEXT
----------------------------------- */
+/* HEADINGS & TEXT */
 h2, h3 {
   font-family: Helvetica, serif;
   margin-bottom: 15px;
@@ -122,9 +90,7 @@ ul {
   display: inline-block;
 }
 
-/* ------------------------------
-   PROBLEM & SOLUTION SECTION
------------------------------- */
+/* PROBLEM & SOLUTION */
 .problem-solution {
   padding: 60px 20px;
   background-color: #FFF5E5;
@@ -169,9 +135,7 @@ ul {
   margin-bottom: 20px;
 }
 
-/* --------------------------------
-   BUTTON
----------------------------------- */
+/* BUTTON */
 .Button {
   display: inline-block;
   padding: 10px 25px;
@@ -192,9 +156,7 @@ ul {
   transform: scale(1.1);
 }
 
-/* --------------------------------
-   FEATURE CARDS
----------------------------------- */
+/* FEATURE CARDS */
 .feature {
   background: #FFDFBF;
   padding: 20px;
@@ -205,7 +167,6 @@ ul {
   text-align: left;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.4s ease, box-shadow 0.3s ease;
-  transform-origin: center;
 }
 
 .feature:hover {
@@ -217,17 +178,13 @@ ul {
   color: #DC4D01;
 }
 
-/* --------------------------------
-   CONTENT SECTION
----------------------------------- */
+/* CONTENT SECTION */
 .content {
   padding: 40px 30px;
   background: #FFDFBF;
 }
 
-/* --------------------------------
-   IMAGE SECTION — responsive 3/4 height
----------------------------------- */
+/* IMAGE SECTION */
 .image-section {
   width: 100%;
   display: flex;
@@ -244,7 +201,7 @@ ul {
   display: block;
 }
 
-/* FULL-WIDTH RESPONSIVE BANNER */
+/* BANNER */
 .banner {
   width: 100%;
   margin-top: 80px;
@@ -258,9 +215,7 @@ ul {
   display: block;
 }
 
-/* --------------------------------
-   FORM STYLING
----------------------------------- */
+/* FORM STYLING */
 form {
   max-width: 600px;
   margin: 40px auto;
@@ -330,9 +285,7 @@ button:hover {
   }
 }
 
-/* --------------------------------
-   FOOTER
----------------------------------- */
+/* FOOTER */
 footer {
   margin-top: 50px;
   padding: 20px;
