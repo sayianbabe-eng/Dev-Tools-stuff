@@ -195,7 +195,19 @@ ul {
   object-fit: cover;
   display: block;
 }
+/* FULL-WIDTH RESPONSIVE BANNER */
+.banner {
+  width: 100%;
+  margin-top: 80px;   /* pushes it below fixed header */
+}
 
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;   /* keeps image large but not too tall */
+  object-fit: cover;
+  display: block;
+}
 /* --------------------------------
    FORM STYLING
 ---------------------------------- */
@@ -267,6 +279,8 @@ button:hover {
     padding: 20px;
   }
 }
+
+
 
 /* --------------------------------
    FOOTER
