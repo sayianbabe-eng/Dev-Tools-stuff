@@ -1,4 +1,6 @@
+// ===============================
 // FORM VALIDATION
+// ===============================
 const form = document.getElementById("contactForm");
 const errorMsg = document.getElementById("errorMsg");
 
@@ -10,25 +12,34 @@ if (form) {
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+        // Required field check
         if (!name || !email || !message) {
             e.preventDefault();
             errorMsg.textContent = "All fields are required.";
             return;
         }
 
+        // Email format check
         if (!emailPattern.test(email)) {
             e.preventDefault();
             errorMsg.textContent = "Please enter a valid email.";
             return;
         }
 
+        // If valid, clear errors
         errorMsg.textContent = "";
     });
 }
 
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("navbar").querySelector(".nav-links");
 
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
+// ===============================
+// MOBILE NAV TOGGLE
+// ===============================
+const toggle = document.getElementById("menuToggle"); // corrected ID
+const navLinks = document.getElementById("navLinks"); // UL element
+
+if (toggle && navLinks) {
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+}
