@@ -12,15 +12,14 @@ body {
   text-align: center;
 }
 
-Header {
+/* Header */
+header {
   position: fixed;
   top: 0;
   width: 100%;
   background: #DC4D01;
   z-index: 1000;
-
   padding: 10px 20px;
-
   display: flex;
   justify-content: space-between; /* Logo left, navbar right */
   align-items: center;
@@ -60,11 +59,11 @@ Header {
   border-bottom: 2px solid #fff;
 }
 
-
 /* SECTION: Problem & Solution */
 .problem-solution {
   padding: 40px 30px;
   background: #FFDFBF;
+  text-align: center;
 }
 
 /* Headings */
@@ -74,15 +73,22 @@ h2, h3 {
 }
 
 /* Paragraphs */
-p {
-  margin-bottom: 15px;
-  max-width: 900px;
+p, li {
+  font-size: 1rem;
+  color: #000;
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
-  color: black;
 }
 
-/* BUTTON */
+/* Lists */
+ul {
+  margin-top: 10px;
+  text-align: left;
+  display: inline-block;
+}
+
+/* Button */
 .Button {
   display: inline-block;
   padding: 10px 25px;
@@ -93,7 +99,8 @@ p {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .Button:hover {
@@ -102,7 +109,7 @@ p {
   transform: scale(1.1);
 }
 
-
+/* Features */
 .feature {
   background: #FFDFBF;
   padding: 20px;
@@ -111,30 +118,25 @@ p {
   border-left: 6px solid #DC4D01;
   max-width: 900px;
   text-align: left;
-}
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  transition: width 0.5s ease-out, box-shadow 0.3s linear; transition-delay: 0.1s; 
+} 
 
+.feature:hover { 
+  width: 250px; 
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); 
+}
 .feature h3 {
   color: #DC4D01;
 }
 
+/* Content Section */
 .content {
   padding: 40px 30px;
   background: #FFDFBF;
 }
 
-p, li {
-  font-size: 1rem;
-  color: #000;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-ul {
-  margin-top: 10px;
-  text-align: left;
-  display: inline-block;
-}
+/* Image Section */
 .image-section {
   width: 100%;
   display: flex;
@@ -148,9 +150,7 @@ ul {
   border-radius: 12px;
   display: block;
 }
-/* ------------------------------
-   FOOTER
------------------------------- */
+/* Footer */
 footer {
   margin-top: 50px;
   padding: 20px;
