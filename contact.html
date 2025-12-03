@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyworks – Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Storyworks</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+
+    <section>
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <label>Name:</label>
+            <input type="text" id="name" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" required>
+
+            <label>Message:</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="errorMsg" class="error"></p>
+        </form>
+    </section>
+
+   </main>
+
+<footer>
+    <p>&copy; 2025 Storyworks. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
