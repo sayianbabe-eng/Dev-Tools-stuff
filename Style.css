@@ -208,6 +208,49 @@ ul {
   object-fit: cover;
   display: block;
 }
+/* --- IMAGE POPUP MODAL --- */
+
+.image-modal {
+  display: none;              /* Hidden by default */
+  position: fixed;
+  z-index: 9999;              /* On top of everything */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Smooth fade */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Make sure cursor indicates interactivity */
+.image-section img {
+  cursor: zoom-in;
+}
 
 /* BANNER */
 .banner {
