@@ -85,7 +85,7 @@ header {
 
   /* Push content further so header never overlaps text */
   body {
-    padding-top: 90px; /* space from top */
+    padding-top: 20px; /* space from top */
   }
 }
 
