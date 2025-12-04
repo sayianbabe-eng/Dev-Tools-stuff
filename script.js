@@ -69,3 +69,24 @@ modal.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+// =============================
+//  HIDE / SHOW HEADER ON SCROLL
+// =============================
+
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+        // scrolling down
+        header.classList.add("hide");
+    } else {
+        // scrolling up or at top
+        header.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+});
